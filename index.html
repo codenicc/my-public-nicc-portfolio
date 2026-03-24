@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnold Nico G. Ome | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-text">CODENIC<span class="accent">.</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#about" class="nav-link" data-section="about">About Me</a>
+      <a href="#other-side" class="nav-link" data-section="other-side">Other Side</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="mobile-link" data-section="home">Home</a>
+    <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
+    <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+    <a href="#about" class="mobile-link" data-section="about">About Me</a>
+    <a href="#other-side" class="mobile-link" data-section="other-side">Other Side</a>
+    <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+  </div>
+
+  <!-- Hero / Home Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Junior Data Analyst</div>
+      <h1 class="hero-name">
+        <span class="line">ARNOLD NICO</span>
+        <span class="line">G. OME</span>
+      </h1>
+      <div class="hero-clock" id="heroClock">
+        <div class="clock-time" id="clockTime">--:--:--</div>
+        <div class="clock-date" id="clockDate">--- --, ----</div>
+      </div>
+      
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Projects
+        </a>
+        <a href="#skills" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Skills
+        </a>
+        <a href="#about" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          About Me
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PORTFOLIO</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A collection of my latest and past work</p>
+      </div>
+
+      <div class="project-tabs">
+        <button class="tab-btn active" data-tab="latest">Latest Project</button>
+        <button class="tab-btn" data-tab="current">Current Events</button>
+        <button class="tab-btn" data-tab="past">Past Projects</button>
+      </div>
+
+      <!-- Latest Project -->
+      <div class="tab-content active" id="tab-latest">
+        <div class="project-card project-featured">
+          <div class="project-label">LATEST</div>
+          <div class="project-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3 class="project-title">STARITAS</h3>
+          <div class="project-image-container">
+            <img src="staritas.png" alt="Staritas Project Dashboard" class="project-image">
+          </div>
+          <p class="project-description">A construction and project management system that integrates <strong>attendance tracking</strong>, <strong>procurement</strong>, <strong>equipment monitoring</strong>, and <strong>cost analysis</strong>. It enables efficient reporting, workforce management, and data-driven decisions in one platform.</p>
+          <div class="project-tags">
+            <span class="tag">Project Management</span>
+            <span class="tag">Construction</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">Workforce</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Events -->
+      <div class="tab-content" id="tab-current">
+        <p class="current-events-lead">Recent meetups and developer sessions I've joined.</p>
+        <div class="projects-grid current-events-grid">
+          <div class="project-card">
+            <div class="project-label">MAR 21, 2026</div>
+            <div class="project-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+            <h3 class="project-title">Breaking the Career Pattern</h3>
+            <div class="project-image-container">
+              <img src="event-gdg-breaking-career-pattern.png" alt="GDG Manila — Breaking the Career Pattern presentation slide" class="project-image" loading="lazy">
+            </div>
+            <p class="project-description">Session with <strong>Google Developers Group Manila</strong> on rethinking career paths and growth in tech — great conversations with builders in the room.</p>
+            <div class="project-tags">
+              <span class="tag">GDG Manila</span>
+              <span class="tag">Career</span>
+              <span class="tag">Community</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-label">BUILD WITH AI</div>
+            <div class="project-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="project-title">Break the Pattern</h3>
+            <div class="project-image-container">
+              <img src="event-build-with-ai-group.png" alt="Group photo at Build with AI — Break the Pattern event" class="project-image" loading="lazy">
+            </div>
+            <p class="project-description"><strong>Build with AI</strong> — group shot with fellow participants after an energizing session. Same spirit as breaking old habits and trying new tools.</p>
+            <div class="project-tags">
+              <span class="tag">Build with AI</span>
+              <span class="tag">Google</span>
+              <span class="tag">Developers</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-label">GOOGLE FOR DEVS</div>
+            <div class="project-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="project-title">Vibe Coding — Zero to One</h3>
+            <div class="project-image-container">
+              <img src="event-vibe-coding-zero-to-one.png" alt="Google for Developers — Vibe Coding Zero to One slide" class="project-image" loading="lazy">
+            </div>
+            <p class="project-description">Workshop track on <strong>Vibe Coding</strong> — building a first app with <strong>Google AI Studio</strong> and <strong>Antigravity</strong>, guided by the official handbook.</p>
+            <div class="project-tags">
+              <span class="tag">Vibe Coding</span>
+              <span class="tag">AI Studio</span>
+              <span class="tag">Antigravity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-featured current-events-ongoing">
+          <div class="project-label">ONGOING</div>
+          <div class="project-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="15" r="2"/></svg>
+          </div>
+          <h3 class="project-title">Exploring AI</h3>
+          <div class="project-image-container">
+            <img src="exploring-ai.png" alt="Quest Mode - AI Autonomous Agent Workflow" class="project-image">
+          </div>
+          <p class="project-description">Currently exploring and mastering AI engineering through different AI-powered IDEs and communities. Leveraging tools like <strong>Claude Code</strong>, <strong>Lovable</strong>, <strong>Cursor</strong>, <strong>Qoder</strong>, <strong>Zed</strong>, and <strong>Databricks</strong> to push the boundaries of AI-assisted development. Actively engaging with AI communities to share knowledge and collaborate on innovative solutions.</p>
+          <div class="project-tags">
+            <span class="tag">Claude Code</span>
+            <span class="tag">Lovable</span>
+            <span class="tag">Cursor</span>
+            <span class="tag">Qoder</span>
+            <span class="tag">Zed</span>
+            <span class="tag">Databricks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Past Projects -->
+      <div class="tab-content" id="tab-past">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="project-title">BatStateU Campus Virtual Tour Site</h3>
+            <p class="project-description">Helped develop a digital room monitoring system to track classroom usage and availability using XAMPP and MariaDB database integration and basic automation tools.</p>
+            <div class="project-tags">
+              <span class="tag">XAMPP</span>
+              <span class="tag">MariaDB</span>
+              <span class="tag">Automation</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </div>
+            <h3 class="project-title">FoundIt: Lost and Found Website</h3>
+            <p class="project-description">Designed and implemented a website platform for reporting and retrieving lost items within the Batangas State University campus using web development frameworks.</p>
+            <div class="project-tags">
+              <span class="tag">Web Dev</span>
+              <span class="tag">Platform</span>
+              <span class="tag">University</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><path d="M9 15l2 2 4-4"/></svg>
+            </div>
+            <h3 class="project-title">Navigating the Construction Industry with AI</h3>
+            <p class="project-description">Developed a comprehensive AI-driven software solution aimed at optimizing processes in the construction sector, incorporated machine learning models for predictive analysis and automation.</p>
+            <div class="project-tags">
+              <span class="tag">AI/ML</span>
+              <span class="tag">Construction</span>
+              <span class="tag">Automation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">EXPERTISE</span>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">Java</span>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">C/C++</span>
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">HTML</span>
+            <span class="skill-chip">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 010-4h14v4"/><path d="M3 5v14a2 2 0 002 2h16v-5"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg>
+            <h3>Data Analytics</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">NumPy</span>
+            <span class="skill-chip">Pandas</span>
+            <span class="skill-chip">Power BI</span>
+            <span class="skill-chip">Tableau</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            <h3>Frameworks & Libraries</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">Python Libraries</span>
+            <span class="skill-chip">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-category skill-highlight">
+          <div class="skill-category-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <h3>Currently Mastering</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip highlight">Qoder</span>
+            <span class="skill-chip highlight">Cursor</span>
+            <span class="skill-chip highlight">Lovable</span>
+            <span class="skill-chip highlight">Databricks</span>
+            <span class="skill-chip highlight">Claude Code</span>
+            <span class="skill-chip highlight">Claude AI</span>
+            <span class="skill-chip highlight">Vercel</span>
+            <span class="skill-chip highlight">VS Code + Claude</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ABOUT / INTEL</span>
+        <h2 class="section-title">ABOUT NIC</h2>
+        <p class="section-subtitle">My journey in tech and beyond</p>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-main">
+          <div class="about-intro">
+            <p>I'm <strong>Nico</strong>, a <strong>Junior Data Analyst</strong> and a <strong>Computer Engineering graduate</strong> with a growing passion for AI engineering. My interest in artificial intelligence has led me to actively explore the field and deepen my understanding of how AI can be applied in real-world scenarios.</p>
+            <p>I'm currently participating in various events and learning opportunities focused on AI to better understand its evolving landscape. Along the way, I've been exploring modern tools and IDEs such as <strong>Claude</strong>, <strong>Cursor</strong>, <strong>Qoder</strong>, <strong>Lovable</strong>, and <strong>Databricks</strong> to enhance both my development workflow and problem-solving skills.</p>
+          </div>
+
+          <div class="experience-timeline">
+            <h3 class="about-section-title">Experience</h3>
+
+            <div class="timeline-item current">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <span class="timeline-role">Exploring AI Engineering</span>
+                  <span class="timeline-date">Present</span>
+                </div>
+                <div class="timeline-company">AI Communities & Self-Directed Learning</div>
+                <ul class="timeline-details">
+                  <li>Exploring AI with different IDEs like Claude Code, Cursor, Qoder, Zed, GitHub Copilot, Windsurf, and Cline</li>
+                  <li>Engaging with AI communities including Claude AI ecosystem to share knowledge and collaborate</li>
+                  <li>Mastering AI engineering techniques across multiple AI-powered development environments</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <span class="timeline-role">Junior Developer Intern</span>
+                  <span class="timeline-date">Sep - Nov 2024</span>
+                </div>
+                <div class="timeline-company">ICT Services, Batangas State University</div>
+                <ul class="timeline-details">
+                  <li>Participated in web development projects and assisted in debugging tasks. Used WordPress to debug and check scripts to optimize runtime by reducing lines of code.</li>
+                  <li>Collaborated with senior developers to troubleshoot Python scripts involving ETL processes, optimize database queries, and implement UI enhancements with C++ and HTML.</li>
+                  <li>Gained practical experience in SDLC including designing, planning, and deployment within an academic environment.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <span class="timeline-role">Technical Support Intern</span>
+                  <span class="timeline-date">Sep - Nov 2024</span>
+                </div>
+                <div class="timeline-company">ICT Services, Batangas State University</div>
+                <ul class="timeline-details">
+                  <li>Provided technical support for checking deployed hardware devices for LAN compatibility.</li>
+                  <li>Assisted in the deployment and documentation of hardware devices.</li>
+                  <li>Engaged in peer training and knowledge sharing on best practices in debugging and testing.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-sidebar">
+          <div class="info-card profile-card">
+            <div class="profile-frame">
+              <div class="profile-image-container">
+                <img src="profile.png" alt="Arnold Nico G. Ome - Computer Engineer Graduate" class="profile-image">
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Current Status</h4>
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              Junior Data Analyst
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Experiencing AI</h4>
+            <div class="ai-tools">
+              <span class="ai-tool">Claude AI</span>
+              <span class="ai-tool">Claude Code</span>
+              <span class="ai-tool">Qoder</span>
+              <span class="ai-tool">Cursor</span>
+              <span class="ai-tool">Zed</span>
+              <span class="ai-tool">GitHub Copilot</span>
+              <span class="ai-tool">Windsurf</span>
+              <span class="ai-tool">Cline</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Education</h4>
+            <p>Computer Engineer Graduate</p>
+            <p class="education-school">Batangas State University</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Side of NIC -->
+  <section class="section section-alt" id="other-side">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">BEYOND THE SCREEN</span>
+        <h2 class="section-title">Other Side of NIC</h2>
+        <p class="section-subtitle">Fitness, balance, and the small moments away from code and data</p>
+      </div>
+
+      <div class="other-side-grid">
+        <article class="other-side-card">
+          <div class="other-side-image-wrap">
+            <img src="other-side-nic-sneakers.png" alt="Nico's neon green sneakers on concrete — casual, personal style" class="other-side-image" width="600" height="800" loading="lazy">
+          </div>
+          <div class="other-side-body">
+            <h3 class="other-side-title">On the move</h3>
+            <p class="other-side-text">Every single step counts — whether it feels small or insignificant, it is still progress.</p>
+          </div>
+        </article>
+
+        <article class="other-side-card">
+          <div class="other-side-image-wrap">
+            <img src="other-side-nic-gym.png" alt="Troyville Fitness Center — weight room and Stay Strong wall" class="other-side-image" width="600" height="800" loading="lazy">
+          </div>
+          <div class="other-side-body">
+            <h3 class="other-side-title">Stay strong</h3>
+            <p class="other-side-text">Training keeps me disciplined and energized — the same focus I bring to building and analyzing systems.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Let's connect and build something great</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:arnoldnicoome@gmail.com" class="contact-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">arnoldnicoome@gmail.com</span>
+        </a>
+
+        <a href="tel:09455616947" class="contact-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">0945-561-6947</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/angome/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/angome</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Arnold Nico G. Ome. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
