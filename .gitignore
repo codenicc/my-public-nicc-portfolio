@@ -1,5 +1,7 @@
 .qoder/
 .cursor/
+node_modules/
+.vercel/
 Thumbs.db
 Desktop.ini
 *.log
