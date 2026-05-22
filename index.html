@@ -16,7 +16,7 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
-      <span class="logo-text">CODENIC<span class="accent">.</span></span>
+      <span class="logo-text">devnic<span class="accent">.</span></span>
     </div>
     <div class="nav-links">
       <a href="#home" class="nav-link active" data-section="home">Home</a>
@@ -44,39 +44,67 @@
   <!-- Hero / Home Section -->
   <section class="hero" id="home">
     <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <div class="hero-badge">Junior Data Analyst</div>
-      <h1 class="hero-name">
-        <span class="line">ARNOLD NICO</span>
-        <span class="line">G. OME</span>
-      </h1>
 
-      <div class="hero-typing-wrapper">
-        <span class="hero-typing-prefix">Currently</span>
-        <span class="hero-typing-text" id="typingText"></span>
-        <span class="hero-cursor"></span>
+    <div class="hero-inner">
+      <!-- Left: Text -->
+      <div class="hero-left">
+        <div class="hero-greeting">
+          <span class="greeting-wave">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 3.31-2.69 6-6 6h-2c-1.83 0-3.46-.8-4.58-2.06L7 14.5"/><path d="M6.5 11H8v-1c0-.83-.67-1.5-1.5-1.5S5 9.17 5 10v5.5"/><path d="M5 10.5V8c0-.83-.67-1.5-1.5-1.5S2 7.17 2 8v4.5c0 3.58 2.92 6.5 6.5 6.5H11"/></svg>
+          </span>
+          Hey, I'm Nico
+        </div>
+
+        <h1 class="hero-name">
+          <span class="line">ARNOLD NICO</span>
+          <span class="line">G. OME</span>
+        </h1>
+
+        <div class="hero-role-badge">
+          <span class="role-dot"></span>
+          Junior Data Analyst
+        </div>
+
+        <p class="hero-bio">Turning raw data into clear decisions — one structured report at a time. Currently exploring AI to push what's possible.</p>
+
+        <div class="hero-typing-wrapper">
+          <span class="hero-typing-prefix">Now</span>
+          <span class="hero-typing-text" id="typingText"></span>
+          <span class="hero-cursor"></span>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Say Hello
+          </a>
+        </div>
       </div>
 
-      <div class="hero-clock" id="heroClock">
-        <div class="clock-time" id="clockTime">--:--:--</div>
-        <div class="clock-date" id="clockDate">--- --, ----</div>
-      </div>
+      <!-- Right: Photo -->
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-glow"></div>
+          <img src="profile.png" alt="Arnold Nico G. Ome" class="hero-photo">
 
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          Projects
-        </a>
-        <a href="#skills" class="btn btn-secondary">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          Skills
-        </a>
-        <a href="#about" class="btn btn-outline">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          About Me
-        </a>
+          <!-- Floating cards -->
+          <div class="hero-float hero-float--tl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Data Analyst
+          </div>
+
+          <div class="hero-float hero-float--br">
+            <span class="float-dot"></span>
+            Open to work
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
     </div>
@@ -127,7 +155,7 @@
             <div class="project-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
             </div>
-            <h3 class="project-title">Breaking the Career Pattern</h3>
+            <h3 class="project-title">First Google Event</h3>
             <div class="project-image-container">
               <img src="event-gdg-breaking-career-pattern.png" alt="GDG Manila — Breaking the Career Pattern presentation slide" class="project-image" loading="lazy">
             </div>
@@ -140,11 +168,11 @@
           </div>
 
           <div class="project-card">
-            <div class="project-label">BUILD WITH AI</div>
+            <div class="project-label">Technology-driven Professional</div>
             <div class="project-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
             </div>
-            <h3 class="project-title">Break the Pattern</h3>
+            <h3 class="project-title">Technology-driven Professional</h3>
             <div class="project-image-container">
               <img src="event-build-with-ai-group.png" alt="Group photo at Build with AI — Break the Pattern event" class="project-image" loading="lazy">
             </div>
@@ -179,7 +207,7 @@
           <div class="project-icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="15" r="2"/></svg>
           </div>
-          <h3 class="project-title">Exploring AI</h3>
+          <h3 class="project-title">Vibe Coding</h3>
           <div class="project-image-container">
             <img src="exploring-ai.png" alt="Quest Mode - AI Autonomous Agent Workflow" class="project-image">
           </div>
@@ -316,7 +344,7 @@
         <div class="skill-category skill-highlight">
           <div class="skill-category-header">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            <h3>VIBE Coding</h3>
+            <h3>AI Skills</h3>
           </div>
           <div class="skill-items">
             <span class="skill-chip highlight">Qoder</span>
@@ -474,7 +502,7 @@
             <img src="other-side-nic-sneakers.png" alt="Nico's neon green sneakers on concrete — casual, personal style" class="other-side-image" width="600" height="800" loading="lazy">
           </div>
           <div class="other-side-body">
-            <h3 class="other-side-title">On the move</h3>
+            <h3 class="other-side-title">Running</h3>
             <p class="other-side-text">Every single step counts — whether it feels small or insignificant, it is still progress.</p>
           </div>
         </article>
@@ -484,7 +512,7 @@
             <img src="other-side-nic-gym.png" alt="Troyville Fitness Center — weight room and Stay Strong wall" class="other-side-image" width="600" height="800" loading="lazy">
           </div>
           <div class="other-side-body">
-            <h3 class="other-side-title">Stay strong</h3>
+            <h3 class="other-side-title">Gym Life</h3>
             <p class="other-side-text">Training keeps me disciplined and energized — the same focus I bring to building and analyzing systems.</p>
           </div>
         </article>
