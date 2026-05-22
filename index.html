@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
@@ -47,22 +50,29 @@
         <span class="line">ARNOLD NICO</span>
         <span class="line">G. OME</span>
       </h1>
+
+      <div class="hero-typing-wrapper">
+        <span class="hero-typing-prefix">Currently</span>
+        <span class="hero-typing-text" id="typingText"></span>
+        <span class="hero-cursor"></span>
+      </div>
+
       <div class="hero-clock" id="heroClock">
         <div class="clock-time" id="clockTime">--:--:--</div>
         <div class="clock-date" id="clockDate">--- --, ----</div>
       </div>
-      
+
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           Projects
         </a>
         <a href="#skills" class="btn btn-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           Skills
         </a>
         <a href="#about" class="btn btn-outline">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           About Me
         </a>
       </div>
@@ -82,9 +92,9 @@
       </div>
 
       <div class="project-tabs">
-        <button class="tab-btn active" data-tab="latest">Latest Project</button>
-        <button class="tab-btn" data-tab="current">Current Events</button>
-        <button class="tab-btn" data-tab="past">Past Projects</button>
+        <button class="tab-btn active" data-tab="latest">Latest</button>
+        <button class="tab-btn" data-tab="current">Events</button>
+        <button class="tab-btn" data-tab="past">Past</button>
       </div>
 
       <!-- Latest Project -->
@@ -243,7 +253,7 @@
       <div class="skills-grid">
         <div class="skill-category">
           <div class="skill-category-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             <h3>Languages</h3>
           </div>
           <div class="skill-items">
@@ -257,18 +267,19 @@
 
         <div class="skill-category">
           <div class="skill-category-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             <h3>Frontend</h3>
           </div>
           <div class="skill-items">
             <span class="skill-chip">HTML</span>
+            <span class="skill-chip">CSS</span>
             <span class="skill-chip">JavaScript</span>
           </div>
         </div>
 
         <div class="skill-category">
           <div class="skill-category-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
             <h3>Backend</h3>
           </div>
           <div class="skill-items">
@@ -279,7 +290,7 @@
 
         <div class="skill-category">
           <div class="skill-category-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 010-4h14v4"/><path d="M3 5v14a2 2 0 002 2h16v-5"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 010-4h14v4"/><path d="M3 5v14a2 2 0 002 2h16v-5"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg>
             <h3>Data Analytics</h3>
           </div>
           <div class="skill-items">
@@ -292,19 +303,20 @@
 
         <div class="skill-category">
           <div class="skill-category-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            <h3>Frameworks & Libraries</h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <h3>Frameworks & Tools</h3>
           </div>
           <div class="skill-items">
             <span class="skill-chip">Python Libraries</span>
             <span class="skill-chip">Docker</span>
+            <span class="skill-chip">Vercel</span>
           </div>
         </div>
 
         <div class="skill-category skill-highlight">
           <div class="skill-category-header">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            <h3>Currently Mastering</h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <h3>VIBE Coding</h3>
           </div>
           <div class="skill-items">
             <span class="skill-chip highlight">Qoder</span>
@@ -326,7 +338,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">ABOUT / INTEL</span>
-        <h2 class="section-title">ABOUT NIC</h2>
+        <h2 class="section-title">About NIC</h2>
         <p class="section-subtitle">My journey in tech and beyond</p>
       </div>
 
@@ -361,7 +373,7 @@
               <div class="timeline-content">
                 <div class="timeline-header">
                   <span class="timeline-role">Junior Developer Intern</span>
-                  <span class="timeline-date">Sep - Nov 2024</span>
+                  <span class="timeline-date">Sep – Nov 2024</span>
                 </div>
                 <div class="timeline-company">ICT Services, Batangas State University</div>
                 <ul class="timeline-details">
@@ -377,7 +389,7 @@
               <div class="timeline-content">
                 <div class="timeline-header">
                   <span class="timeline-role">Technical Support Intern</span>
-                  <span class="timeline-date">Sep - Nov 2024</span>
+                  <span class="timeline-date">Sep – Nov 2024</span>
                 </div>
                 <div class="timeline-company">ICT Services, Batangas State University</div>
                 <ul class="timeline-details">
@@ -498,9 +510,20 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Arnold Nico G. Ome. All rights reserved.</p>
+      <div class="footer-content">
+        <p>&copy; 2026 Arnold Nico G. Ome. All rights reserved.</p>
+        <div class="footer-divider"></div>
+        <p class="footer-badge">Built with <span>Claude Code</span></p>
+      </div>
     </div>
   </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
 
   <script src="script.js"></script>
 </body>

@@ -1,18 +1,24 @@
 // ===== Real-Time Clock =====
 function updateClock() {
   const now = new Date();
-
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
-  document.getElementById('clockTime').textContent = `${hours}:${minutes}:${seconds}`;
-
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  document.getElementById('clockDate').textContent = now.toLocaleDateString('en-US', options);
+  const h = now.getHours().toString().padStart(2, '0');
+  const m = now.getMinutes().toString().padStart(2, '0');
+  const s = now.getSeconds().toString().padStart(2, '0');
+  document.getElementById('clockTime').textContent = `${h}:${m}:${s}`;
+  const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('clockDate').textContent = now.toLocaleDateString('en-US', opts);
 }
-
 updateClock();
 setInterval(updateClock, 1000);
+
+// ===== Scroll Progress Bar =====
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollProgress.style.width = pct + '%';
+});
 
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
@@ -26,24 +32,17 @@ const navLinks = document.querySelectorAll('.nav-link');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
 function updateActiveLink() {
-  const scrollPos = window.scrollY + 150;
-
+  const scrollPos = window.scrollY + 140;
   sections.forEach(section => {
     const top = section.offsetTop;
     const height = section.offsetHeight;
     const id = section.getAttribute('id');
-
     if (scrollPos >= top && scrollPos < top + height) {
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('data-section') === id);
-      });
-      mobileLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('data-section') === id);
-      });
+      navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('data-section') === id));
+      mobileLinks.forEach(link => link.classList.toggle('active', link.getAttribute('data-section') === id));
     }
   });
 }
-
 window.addEventListener('scroll', updateActiveLink);
 
 // ===== Mobile Menu Toggle =====
@@ -69,10 +68,8 @@ const tabContents = document.querySelectorAll('.tab-content');
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const tab = btn.getAttribute('data-tab');
-
     tabBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
     tabContents.forEach(content => {
       content.classList.toggle('active', content.id === `tab-${tab}`);
     });
@@ -82,28 +79,74 @@ tabBtns.forEach(btn => {
 // ===== Scroll Reveal Animation =====
 function reveal() {
   const elements = document.querySelectorAll('.project-card, .skill-category, .contact-card, .timeline-item, .info-card, .other-side-card');
-
   elements.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (elementTop < windowHeight - revealPoint) {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 90) {
       el.classList.add('reveal', 'visible');
     }
   });
 }
-
 window.addEventListener('scroll', reveal);
 window.addEventListener('load', reveal);
+
+// ===== Back to Top =====
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // ===== Smooth scroll for nav links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+// ===== Typing Animation =====
+const typingPhrases = [
+  'exploring AI tools',
+  'mastering Claude Code',
+  'analyzing data',
+  'building with AI',
+  'leveling up daily',
+];
+
+const typingEl = document.getElementById('typingText');
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingPaused = false;
+
+function typeWriter() {
+  if (!typingEl) return;
+
+  const current = typingPhrases[phraseIndex];
+
+  if (!isDeleting) {
+    typingEl.textContent = current.substring(0, charIndex + 1);
+    charIndex++;
+    if (charIndex === current.length) {
+      typingPaused = true;
+      setTimeout(() => { typingPaused = false; isDeleting = true; typeWriter(); }, 2000);
+      return;
+    }
+  } else {
+    typingEl.textContent = current.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+    }
+  }
+
+  const speed = isDeleting ? 45 : 85;
+  setTimeout(typeWriter, speed);
+}
+
+setTimeout(typeWriter, 1200);
